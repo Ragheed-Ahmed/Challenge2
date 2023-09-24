@@ -1,0 +1,150 @@
+:root {
+  --clr-Red: hsl(0, 100%, 74%) ;
+  --clr-Green: hsl(154, 59%, 51%);
+
+  --clr-Blue: hsl(248, 32%, 49%);
+
+  --clr-Dark-Blue: hsl(249, 10%, 26%) ;
+  --clr-Grayish-Blue: hsl(246, 25%, 77%);
+
+  --ff-base: "Poppins", sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-base);
+}
+
+main {
+  max-width: 80%;
+  flex-direction: row;
+  gap: 1em;
+}
+
+body {
+  background: url("../images/bg-intro-desktop.png"), var(--clr-Red);
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.content {
+  text-align: left;
+  padding: 1.5em;
+  font-size: 0.9em;
+}
+.content h1 {
+  font-size: 2.5em;
+}
+
+.signup {
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  gap: 1.5em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.signup_pricing, .signup_form {
+  border-radius: 8px;
+}
+
+.signup_pricing {
+  box-shadow: 0px 0.45em 0px 0px var(--clr-Red);
+  background-color: var(--clr-Blue);
+  padding: 0.5em;
+  text-align: inherit;
+  color: white;
+  font-size: 0.8em;
+}
+
+.signup_form {
+  box-shadow: 0px 0.45em 0px 0px var(--clr-Red);
+  background-color: white;
+  padding: 1.5em;
+  position: relative;
+}
+.signup_form input {
+  width: 100%;
+  height: 3em;
+  padding: 0 1em;
+  margin-top: 0.9em;
+  font-family: inherit;
+  font-weight: var(--fw-bolder);
+}
+
+
+input[type=submit] {
+  box-shadow: 0px 0.3em 0px 0px ;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--clr-Green);
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  box-shadow: 0px 0.3em 0px 0px var(--clr-Green);
+  background-color: #44e49f;
+}
+
+.terms-notice {
+  display: block;
+  margin-top: 1em;
+  padding: 0.5em;
+  font-size: 0.75em;
+  color: var(--clr-Grayish-Blue);
+}
+.terms-notice span {
+  color: var(--clr-Red);
+  font-weight: bolder;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  font-size: smaller;
+}
+footer a {
+  color: inherit;
+}
+
+@media screen and (max-width: 650px) {
+
+  main {
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    background: url("../images/bg-intro-mobile.png"), var(--clr-Red);
+    background-position: center;
+    background-repeat: repeat;
+  }
+  
+  .content {
+    color: white;
+    text-align: center;
+    padding: 1em;
+  }
+  .content h1 {
+    line-height: 1.25em;
+  }
+
+}
